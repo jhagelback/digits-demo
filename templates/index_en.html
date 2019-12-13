@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Digits Demo</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="../static/drawer.js"></script>
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body onload="init()">
+        <canvas id="can" width="448" height="448"></canvas>
+        <img id="canvasimg" class="cimg">
+        <div id="data" class="data"></div>
+        <div class="panel">
+            <button id="classifybt" onclick="classify()">Check</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="erase()">Clear</button>
+        </div>
+
+        <div class="result">
+            <table>
+                <tr>
+                    <td width="150"><font color="#888888">My guess:</font></td>
+                    <td id="label" class="large">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="150"><font color="#888888">How certain am I:</font></td>
+                    <td id="prob"></td>
+                </tr>
+                <tr>
+                    <td width="150"></td>
+                    <td id="probs" class="probs"></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+    </html>

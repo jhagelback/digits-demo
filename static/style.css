@@ -1,0 +1,59 @@
+canvas {
+    border:2px solid;
+    position:absolute;
+    top:20;
+    left:20;
+}
+
+img.cimg {
+    position: absolute;
+    top: 20;
+    left: 20;
+    display: none;
+}
+
+div.data {
+    font-family: 'Lucida Console';
+    font-size: 12px;
+    
+    position:absolute;
+    top:40;
+    left:500;
+}
+
+div.panel {
+    position:absolute;
+    top:490;
+    left:110;
+}
+
+div.result {
+    font-family: 'Lucida Console';
+    font-size: 10px;
+    position:absolute;
+    top:460;
+    left:500;
+}
+
+td {
+    font-size: 14px;
+}
+
+td.probs {
+    color: #999999;
+    font-size: 12px;
+}
+
+td.large {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button {
+    font-size: 14px;
+    border-radius: 12px;
+    background-color: #008CBA;
+    color: white;
+    width: 120px;
+    height: 25px;
+}
