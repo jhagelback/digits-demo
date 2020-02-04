@@ -31,8 +31,8 @@ def build_model():
 
     # Preprocess class labels
     # Convert labels to 10-dimensional one-hot vectors
-    Y_train = np_utils.to_categorical(y_train_raw, 10)
-    Y_test = np_utils.to_categorical(y_test_raw, 10)
+    Y_train = to_categorical(y_train_raw, 10)
+    Y_test = to_categorical(y_test_raw, 10)
 
     # Start timer
     start = time.time()
@@ -40,7 +40,7 @@ def build_model():
     # Convolutional Neural Network model
     model = Sequential()
     model.add(Convolution2D(32, (5, 5), activation="relu", input_shape=(28, 28, 1)))
-    #model.add(MaxPooling2D(pool_size=(2, 2)))  # reduces size to 14x14
+    model.add(MaxPooling2D(pool_size=(2, 2)))  # reduces size to 14x14
     model.add(Convolution2D(32, (5, 5), activation="relu"))
     model.add(MaxPooling2D(pool_size=(2, 2)))  # reduces size to 7x7
     # Fully connected layers
@@ -120,9 +120,8 @@ def test_prediction():
         print("Actual", y_test_raw[i])
 
 
-#build_model()
-model = load_model("model_small")
-#model = load_model("model_large")
+build_model()
+#model = load_model("model")
 test_prediction()
 
 #
