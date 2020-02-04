@@ -120,8 +120,8 @@ def test_prediction():
         print("Actual", y_test_raw[i])
 
 
-build_model()
-#model = load_model("model")
+#build_model()
+model = load_model("model")
 test_prediction()
 
 #
